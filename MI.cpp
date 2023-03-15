@@ -3,27 +3,27 @@ using namespace std;
 
 int main()
 {
-    cout<<"Enter the value of zn:";
+    const int MODULUS = 10;
     int n;
-    cin>>n;
-    int zn[n];
-    for(int k=0;k<n;k++){
-        zn[k]=k;
-    }
-    
 
-    cout << "Additive inverses in Zn are: " << endl;
-    for (int i = 0; i < (n / 2) + 1; i++)
+    cout << "Enter the value of n: ";
+    cin >> n;
+
+    cout << "Additive inverses in Z" << n << " are: " << endl;
+    for (int i = 1; i < n; i++)
     {
-        for (int j = 0; j < n; j++)
+        int inverse = 0;
+        for (int j = 1; j < MODULUS; j++)
         {
-            
-         if ((zn[i] * zn[j]) % 10 == 1) {
-            cout << zn[i] << " and " << zn[j] << endl;
-         }
+            if ((i * j) % MODULUS == 1) {
+                inverse = j;
+                break;
+            }
+        }
+        if (inverse > 0 && inverse != i) {
+            cout << i << " and " << inverse << endl;
         }
     }
-    
 
     return 0;
 }
