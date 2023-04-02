@@ -1,4 +1,4 @@
-#include <openssl/sha.h>
+
 #include <iostream>
 #include <iomanip>
 #include <string>
