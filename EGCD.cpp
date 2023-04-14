@@ -1,8 +1,10 @@
 #include <iostream>
 using namespace std;
 
-int extendedGCD(int a, int b, int& s, int& t) {
-    if (b == 0) {
+int extendedGCD(int a, int b, int &s, int &t)
+{
+    if (b == 0)
+    {
         s = 1;
         t = 0;
         return a;
@@ -14,7 +16,8 @@ int extendedGCD(int a, int b, int& s, int& t) {
     return gcd;
 }
 
-int main() {
+int main()
+{
     int a, b, s, t;
     cout << "Enter two numbers: ";
     cin >> a >> b;
