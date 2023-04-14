@@ -4,10 +4,13 @@
 using namespace std;
 
 // Function to compute modular multiplicative inverse
-int modInverse(int a, int m) {
+int modInverse(int a, int m)
+{
     a = a % m;
-    for(int x = 1; x < m; x++) {
-        if((a * x) % m == 1) {
+    for (int x = 1; x < m; x++)
+    {
+        if ((a * x) % m == 1)
+        {
             return x;
         }
     }
@@ -15,13 +18,16 @@ int modInverse(int a, int m) {
 }
 
 // Function to decrypt Affine cipher
-string decryptAffineCipher(string cipherText, int a, int b) {
+string decryptAffineCipher(string cipherText, int a, int b)
+{
     string plainText = "";
     int n = cipherText.length();
     int aInv = modInverse(a, 26); // compute modular multiplicative inverse of a
-    for(int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++)
+    {
         char c = cipherText[i];
-        if(isalpha(c)) {
+        if (isalpha(c))
+        {
             c = toupper(c);
             c = (aInv * (c - 'A' - b + 26)) % 26 + 'A'; // compute plain text character
         }
@@ -30,7 +36,8 @@ string decryptAffineCipher(string cipherText, int a, int b) {
     return plainText;
 }
 
-int main() {
+int main()
+{
     string cipherText;
     int a, b;
     cout << "Enter the cipher text: ";
