@@ -4,12 +4,15 @@ string additiveCipher(string message, int key)
 {
     string ciphertext = "";
     for (int i = 0; i < message.length(); i++)
-    {  if(int(message[i]) >= 65 && int(message[i] <=90 )){
-        char currentchar = message[i];
-        char encryptedchar = ((8*(currentchar - 'A' + key) % 26) )+ 'A';
-        ciphertext += encryptedchar;
-    }
-       else{
+    {
+        if (int(message[i]) >= 65 && int(message[i] <= 90))
+        {
+            char currentchar = message[i];
+            char encryptedchar = ((8 * (currentchar - 'A' + key) % 26)) + 'A';
+            ciphertext += encryptedchar;
+        }
+        else
+        {
             ciphertext += message[i];
         }
     }

@@ -3,14 +3,14 @@ using namespace std;
 
 int main()
 {
-    cout<<"Enter the value of zn:";
+    cout << "Enter the value of zn:";
     int n;
-    cin>>n;
+    cin >> n;
     int zn[n];
-    for(int k=0;k<n;k++){
-        zn[k]=k;
+    for (int k = 0; k < n; k++)
+    {
+        zn[k] = k;
     }
-    
 
     cout << "Additive inverses in Zn are: " << endl;
     for (int i = 0; i < (n / 2) + 1; i++)
@@ -23,7 +23,6 @@ int main()
             }
         }
     }
-    
 
     return 0;
 }
