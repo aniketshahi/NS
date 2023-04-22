@@ -105,7 +105,7 @@ int main()
     }
 
     // check if determinant is zero
-    if (det == 0)
+  
     {
         cout << "Determinant is zero. Key is not valid.";
         return 0;
