@@ -32,7 +32,7 @@ void matrixToText(int matrix[][3], int size)
     }
 }
 
-// function to multiply two matrices
+
 void multiplyMatrix(int a[][3], int b[][3], int result[][3])
 {
     for (int i = 0; i < 3; i++)
@@ -105,7 +105,7 @@ int main()
     }
 
     // check if determinant is zero
-  
+
     {
         cout << "Determinant is zero. Key is not valid.";
         return 0;
