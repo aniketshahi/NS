@@ -4,7 +4,6 @@
 
 using namespace std;
 
-// function to convert plain text to matrix
 void textToMatrix(string plaintext, int matrix[][3], int size)
 {
     int k = 0;
