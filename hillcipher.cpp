@@ -31,7 +31,6 @@ void matrixToText(int matrix[][3], int size)
     }
 }
 
-
 void multiplyMatrix(int a[][3], int b[][3], int result[][3])
 {
     for (int i = 0; i < 3; i++)

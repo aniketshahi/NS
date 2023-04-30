@@ -9,7 +9,6 @@ std::string encrypt(const std::string &plaintext, const std::string &key)
     std::string ciphertext = "";
     int keyLength = key.length();
 
-    // Create a vector of pairs to store the characters and their corresponding positions in the key
     std::vector<std::pair<char, int>> keyPositions;
 
     // Store the characters and their corresponding positions in the key in the vector
