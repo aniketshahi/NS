@@ -11,7 +11,7 @@ std::string encrypt(const std::string &plaintext, const std::string &key)
 
     std::vector<std::pair<char, int>> keyPositions;
 
-    // Store the characters and their corresponding positions in the key in the vector
+    
     for (int i = 0; i < keyLength; i++)
     {
         keyPositions.push_back(std::make_pair(key[i], i));
