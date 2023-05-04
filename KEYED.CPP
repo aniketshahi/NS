@@ -17,7 +17,7 @@ std::string encrypt(const std::string &plaintext, const std::string &key)
         keyPositions.push_back(std::make_pair(key[i], i));
     }
 
-    // Sort the vector based on the characters in ascending order
+    
     std::sort(keyPositions.begin(), keyPositions.end());
 
     int plaintextLength = plaintext.length();
